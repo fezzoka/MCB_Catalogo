@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Produto>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="@item.ImagemUrl" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Nome</h5>
+                    <p class="card-text">@item.Descricao</p>
+                    <p class="text-success fw-bold">R$ @item.Preco</p>
+                    <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
